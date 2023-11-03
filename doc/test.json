@@ -1,58 +1,26 @@
 [
     {
-      "date": "2022.05.01",
-      "inOut": "in",
-      "type": "profit",
-      "item": "용돈",
-      "price": 300000
+       "name":"정수동",
+       "age":24,
+       "address":"서울시",
+       "height":181.1
     },
     {
-      "date": "2022.05.02",
-      "inOut": "out",
-      "type": "taxi",
-      "item": "택시",
-      "price": 8900
+       "name":"심청",
+       "age":14,
+       "address":"강원시",
+       "height":155.4
     },
     {
-      "date": "2022.05.03",
-      "inOut": "out",
-      "type": "edu",
-      "item": "교보문고",
-      "price": 23000
+       "name":"향단",
+       "age":17,
+       "address":"남원시",
+       "height":159.2
     },
     {
-      "date": "2022.05.04",
-      "inOut": "out",
-      "type": "eatout",
-      "item": "스타벅스신사역점",
-      "price": 18000
-    },
-    {
-      "date": "2022.05.05",
-      "inOut": "out",
-      "type": "eatout",
-      "item": "씨유화곡미라클점",
-      "price": 3000
-    },
-    {
-      "date": "2022.05.06",
-      "inOut": "out",
-      "type": "daily",
-      "item": "다이소",
-      "price": 12000
-    },
-    {
-      "date": "2022.05.07",
-      "inOut": "out",
-      "type": "eatout",
-      "item": "비트박스(강남점)",
-      "price": 15000
-    },
-    {
-      "date": "2022.05.08",
-      "inOut": "out",
-      "type": "eatout",
-      "item": "매드클라운포갈릭(강남점)",
-      "price": 230000
+       "name":"이몽룡",
+       "age":18,
+       "address":"공주시",
+       "height":173.3
     }
-  ]
+ ]
