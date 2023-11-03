@@ -1,3 +1,8 @@
-export function routMaker(reqMethod, ){
-  if(req.)
-}
+
+function routMaker(reqMethod, reqUrl, resCont) {
+  if(req.method===reqMethod&& req.url === reqUrl){
+    resCont;
+  }
+} 
+
+module.exports = routMaker;
