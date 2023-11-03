@@ -7,16 +7,21 @@
   
 </head>
 <body>
-  <div></div>
+  <div id="root">
+    <div id="head">
+      
+    </div>
+  </div>
   <ul id="ul"></ul>
   <script type="text/javascript">
   
   let xhttp = new XMLHttpRequest();
   
+  
   xhttp.onreadystatechange = function () {
     if(xhttp.readyState == 4 && xhttp.status == 200){
       // jsonfunc(this.responseText); //this => xhttp
-  		jsonfunc(xhttp.responseText); // 둘다 가능
+  		jsonfunc(xhttp.responseText); // 
     }
   }
   xhttp.open("GET","test.json", true);
