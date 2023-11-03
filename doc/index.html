@@ -7,11 +7,15 @@
   
 </head>
 <body>
-  <div></div>
+  <div #root></div>
   <script src="test.json" type="text/javascript">
-    let mydata = JSON.parse(JSON.stringify(data));
-    console.log(mydata);
-  </script>
+    fetch("test.json")
+    .then((res) => {
+      return res.json()
+    })
+    .then((obj) => {
+      List(obj);
+    })
   <script></script>
 </body>
 </html>

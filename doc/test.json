@@ -1,8 +1,58 @@
-data=
-	[{
-    	"data1":"a",
-    	"data2":"b"},
-        {
-        "data1":"a1",
-        "data2":"b2"}
-     ]
+[
+    {
+      "date": "2022.05.01",
+      "inOut": "in",
+      "type": "profit",
+      "item": "용돈",
+      "price": 300000
+    },
+    {
+      "date": "2022.05.02",
+      "inOut": "out",
+      "type": "taxi",
+      "item": "택시",
+      "price": 8900
+    },
+    {
+      "date": "2022.05.03",
+      "inOut": "out",
+      "type": "edu",
+      "item": "교보문고",
+      "price": 23000
+    },
+    {
+      "date": "2022.05.04",
+      "inOut": "out",
+      "type": "eatout",
+      "item": "스타벅스신사역점",
+      "price": 18000
+    },
+    {
+      "date": "2022.05.05",
+      "inOut": "out",
+      "type": "eatout",
+      "item": "씨유화곡미라클점",
+      "price": 3000
+    },
+    {
+      "date": "2022.05.06",
+      "inOut": "out",
+      "type": "daily",
+      "item": "다이소",
+      "price": 12000
+    },
+    {
+      "date": "2022.05.07",
+      "inOut": "out",
+      "type": "eatout",
+      "item": "비트박스(강남점)",
+      "price": 15000
+    },
+    {
+      "date": "2022.05.08",
+      "inOut": "out",
+      "type": "eatout",
+      "item": "매드클라운포갈릭(강남점)",
+      "price": 230000
+    }
+  ]
