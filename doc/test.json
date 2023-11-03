@@ -1,17 +1,16 @@
-TestFile = {
-  "test": [
-    1,
-    2,
-    3
-  ],
-  "persons": [
-    {
-      "name": "홍길동",
-      "age": 14
-    },
-    {
-      "name": "최진우",
-      "age": 31
-    }
-  ]
+data = {
+  "colors": {
+    "primary": "#FF5733",
+    "secondary": "#33FF57",
+    "background": "#F5F5F5",
+    "text": "#333333"
+  },
+  "fonts": {
+    "main": "Arial, sans-serif",
+    "alternate": "Georgia, serif"
+  },
+  "icons": {
+    "logo": "🌐",
+    "userAvatar": "👤"
+  }
 }
