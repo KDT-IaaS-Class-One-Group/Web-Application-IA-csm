@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMLHttpRequest</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Create XML with a constructor function and place it in a variable
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if(xhr.readyState== 4 && xhr.status==200){
+        xhr.responseText;
+      }
+    }
+    xhr.open("GET", "style.json", true);
+    xhr.send();
+
+  </script>
+</body>
+</html>
