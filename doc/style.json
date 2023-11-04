@@ -6,17 +6,14 @@
     "background": "#F5F5F5",
     "text": "#333333"
   },
-}
- { "fonts": {
+  
+  "fonts": {
     "main": "Arial, sans-serif",
     "alternate": "Georgia, serif"
   },
-}
- { "icons": {
+  "icons": {
     "logo": "🌐",
     "userAvatar": "👤"
   }
 }
-
-
 ]
