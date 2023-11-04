@@ -22,6 +22,8 @@
     if(xhttp.readyState == 4 && xhttp.status == 200){
       // jsonfunc(this.responseText); //this => xhttp
   		jsonfunc(xhttp.responseText); // 
+      console.log(xhttp.responseText)
+      console.dir(xhttp.responseText)
     }
   }
   xhttp.open("GET","test.json", true);
@@ -32,9 +34,9 @@
     let txt = "";
     // 접근법 1
     for(i=0; i<json.length; i++){
-      for(key in json[i]){ // key값 가져오기
-        txt += key + ":" + json[i][key]; 
-      }
+      // for(key in json[i]){ // key값 가져오기
+      //   txt += key + ":" + json[i][key]; 
+      // }
       txt += "<br>"; // 줄바꾸기
     } 
     document.getElementById('ul').innerHTML = txt;
