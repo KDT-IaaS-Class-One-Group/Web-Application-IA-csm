@@ -6,7 +6,7 @@
   <title>XMLHttpRequest</title>
 </head>
 <body>
-  <div>
+  <div id="root">
     <ul id="ul"></ul>
   </div>
   <script type="text/javascript">
@@ -18,10 +18,9 @@
         
         // JSON 데이터를 사용하여 목록을 생성
         let ul = document.getElementById('ul');
+        let root = document.getElementById('root');
         for (let i = 0; i < json.length; i++) {
-          let li = document.createElement('li');
-          li.style.color = json[i].colors; // 예시: JSON 객체의 'name' 필드 사용
-          ul.appendChild(li);
+          root.style.color = json[i].colors; // 예시: JSON 객체의 'name' 필드 사용
         }
       }
     };
