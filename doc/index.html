@@ -10,7 +10,6 @@
   <div id="root">
     <div id="head"></div>
     <div id="middle"></div>
-    
   </div>
   <ul id="ul"></ul>
   <script type="text/javascript">
@@ -24,7 +23,7 @@
   		jsonfunc(xhttp.responseText); // 
     }
   }
-  xhttp.open("GET","style.json", true);
+  xhttp.open("GET","test.json", true);
   xhttp.send();
   
   function jsonfunc( jsonText ) {
@@ -34,10 +33,11 @@
     for(i=0; i<json.length; i++){
       for(key in json[i]){ // key값 가져오기
         txt += key + ":" + json[i][key]; 
+        li = document.createElement('li')
+        document.getElementById('li').innerHTML = txt;
+        document.getElementById('ul').appendChild(li)
       }
-      txt += "<br>"; // 줄바꾸기
     } 
-    document.getElementById('ul').innerHTML = txt;
   }
   </script>
 </body>
