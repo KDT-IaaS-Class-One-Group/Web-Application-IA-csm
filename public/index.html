@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSV Search</title>
+</head>
+<body>
+    <h1>CSV Search</h1>
+    <input type="text" id="searchInput" placeholder="Search by name">
+    <button id="searchButton">Search</button>
+    <div id="results"></div>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+        const resultsDiv = document.getElementById("results");
+
+        searchButton.addEventListener("click", () => {
+            const searchTerm = searchInput.value;
+            fetch(`/search?searchTerm=${searchTerm}`)
+                .then(response => response.json())
+                .then(data => {
+                    resultsDiv.innerHTML = "";
+                    data.forEach(item => {
+                        resultsDiv.innerHTML += `
+                            <p>Name: ${item.name}</p>
+                            <p>Age: ${item.age}</p>
+                            <p>City: ${item.city}</p>
+                            <hr>
+                        `;
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
