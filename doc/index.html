@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>main</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-  <div id="root">
-    <div id="head"></div>
-    <div id="middle"></div>
-  </div>
-  <ul id="ul"></ul>
-  <script type="text/javascript">
-  let root = document.getElementById('root');
-  let xhttp = new XMLHttpRequest();
-  
-  
-  xhttp.onreadystatechange = function () {
-    if(xhttp.readyState == 4 && xhttp.status == 200){
-      // jsonfunc(this.responseText); //this => xhttp
-  		jsonfunc(xhttp.responseText); // 
-    }
-  }
-  xhttp.open("GET","style.json", true);
-  xhttp.send();
-  
-  function jsonfunc( jsonText ) {
-    let json = JSON.parse(jsonText); // String -> json으로 변환
-    // 접근법 1
-    for(i=0; i<json.length; i++){
-      root.innerHTML = json[i].colors;
-      console.log(txt);
-    } 
-  }
-  </script>
+    <header>
+        <h1>Chat App</h1>
+    </header>
+    <main>
+        <div id="chat-container">
+            <!-- 채팅 내용이 여기에 표시됩니다. -->
+        </div>
+    </main>
+    <footer>
+        <input type="text" id="message-input" placeholder="메시지를 입력하세요">
+        <button id="send-button">전송</button>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
+
