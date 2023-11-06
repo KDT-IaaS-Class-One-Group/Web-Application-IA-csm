@@ -7,38 +7,6 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<<<<<<< HEAD
-  <div id="root">
-    <div id="head"></div>
-    <div id="middle"></div>
-  </div>
-  <ul id="ul"></ul>
-  <script type="text/javascript">
-  let root = document.getElementById('root');
-  let xhttp = new XMLHttpRequest();
-  
-  
-  xhttp.onreadystatechange = function () {
-    if(xhttp.readyState == 4 && xhttp.status == 200){
-      // jsonfunc(this.responseText); //this => xhttp
-  		jsonfunc(xhttp.responseText); // 
-      console.log(xhttp.responseText)
-      console.dir(xhttp.responseText)
-    }
-  }
-  xhttp.open("GET","style.json", true);
-  xhttp.send();
-  
-  function jsonfunc( jsonText ) {
-    let json = JSON.parse(jsonText); // String -> json으로 변환
-    // 접근법 1
-    for(i=0; i<json.length; i++){
-      root.innerHTML = json[i].colors;
-      console.log(txt);
-    } 
-  }
-  </script>
-=======
     <header>
         <h1>Chat App</h1>
     </header>
@@ -53,7 +21,6 @@
     </footer>
     <script src="index.js"></script>
 
->>>>>>> origin/dev
 </body>
 </html>
 
