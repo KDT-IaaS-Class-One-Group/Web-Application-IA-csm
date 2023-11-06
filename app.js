@@ -17,9 +17,7 @@ const serv = http.createServer((req, res) => {
         res.end(data);
       }
     });
-  } else if (req.method === "POST" && req.url === "/") {
-    res.writeHead(200, contenType);
-  }
+  } 
 });
 
 serv.listen(port, () => {
