@@ -11,19 +11,13 @@ let port = 3217;
 
 // route
 const serv = http.createServer((req, res) => {
-  if (req.method === "GET") {
-    if (req.url === "/") {
-      entryRoute()
-    } else if (req.method === "POST") {
-      if (req.url === "./doc/index.css") {
-        Styles()
+  if (req.method === "GET"&& req.url === "/") {
+      entryRoute(req, res)
+    } else if (req.method === "POST"&&req.url === "/index.css") {
+        Styles(req, res)
+    } else if (req.method === "POST" &&req.url === "/index.js") {
+        Script(req, res)
       }
-    } else if (req.method === "GET") {
-      if (req.url === "./doc/index.css") {
-        Script()
-      }
-    }
-  }
 });
 
 serv.listen(port, () => {
