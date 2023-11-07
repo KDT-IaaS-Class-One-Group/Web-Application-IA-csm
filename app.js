@@ -2,7 +2,8 @@
 const http = require("http");
 const contenType = require("./mod/contenType");
 const entryRoute = require("./route/route");
-const {} = require()
+const routMaker = require("./route/routMaker");
+
 // port
 let port = 3217;
 
@@ -10,7 +11,9 @@ let port = 3217;
 const serv = http.createServer((req, res) => {
   if (req.method === "GET") {
     if (req.url === "/") {
-      entryRoute()
+      // entryRoute()
+      routMaker("GET", "/", readUrlFile("./doc/index.html", contenType))
+      
     } else if (req.url === "./doc/index.css") {
       route.handleStyles(req, res);
     } else if (req.url === "./doc/index.js") {
