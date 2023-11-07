@@ -32,34 +32,37 @@ function rootRoute(req, res, contenType) {
         }
       });
     }
-  } else if (req.method === "POST" && req.url === "/json") {
+  } else if (req.method === "POST" && req.url === "/save-json") {
     let requestBody = '';
     req.on('data', (chunk) => {
-      // 요청 본문 데이터 수집
-      requestBody += chunk;
+        // 요청 본문 데이터 수집
+        requestBody += chunk;
     });
 
     req.on('end', () => {
-      try {
-        const userData = JSON.parse(requestBody);
+        try {
+            const userData = JSON.parse(requestBody);
 
-        // userData를 JSON 파일로 저장
-        fs.writeFile("./doc/save.json", JSON.stringify(userData, null, 2), (err) => {
-          if (err) {
-            console.log("JSON Error");
-          } else {
-            console.log("Data saved as userdata.json");
-            res.writeHead(200, { "Content-Type": "application/json" });
-            res.end(JSON.stringify({ message: "Data saved successfully" }));
-          }
-        });
-      } catch (error) {
-        console.log("JSON Parsing Error");
-        res.writeHead(400, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ error: "Invalid JSON data" }));
-      }
+            // userData를 JSON 파일로 저장
+            fs.writeFile("./doc/save.json", JSON.stringify(userData, null, 2), (err) => {
+                if (err) {
+                    console.log("JSON Error");
+                    res.writeHead(500, { "Content-Type": "application/json" });
+                    res.end(JSON.stringify({ error: "Failed to save data" }));
+                } else {
+                    console.log("Data saved as save.json");
+                    res.writeHead(200, { "Content-Type": "application/json" });
+                    res.end(JSON.stringify({ message: "Data saved successfully" }));
+                }
+            });
+        } catch (error) {
+            console.log("JSON Parsing Error");
+            res.writeHead(400, { "Content-Type": "application/json" });
+            res.end(JSON.stringify({ error: "Invalid JSON data" }));
+        }
     });
-  }
+}
 }
 
 module.exports = rootRoute;
+
