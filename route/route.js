@@ -11,3 +11,5 @@ function entryRoute(req, res){
     }
   });
 }
+
+module.exports = entryRoute;
