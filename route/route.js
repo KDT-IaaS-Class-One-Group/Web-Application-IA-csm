@@ -1,4 +1,5 @@
 const fs = require("fs");
+const contenType = require("../mod/contenType");
 // const contenType = require("./mod/contenType");
 
 // 루트 경로 ("/")에 대한 처리
@@ -7,7 +8,7 @@ function handleRoot(req, res) {
     if (err) {
       console.log("Error");
     } else {
-      res.writeHead(200, { "Content-Type": "text/html" });
+      res.writeHead(200, contenType);
       res.end(data);
     }
   });

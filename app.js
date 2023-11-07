@@ -7,11 +7,7 @@ const serv = http.createServer((req, res) => {
   if (req.method === "GET") {
     if (req.url === "/") {
       route.handleRoot(req, res);
-    } else if (req.url === "./doc/index.css") {
-      route.handleStyles(req, res);
-    } else if (req.url === "./doc/index.js") {
-      route.handleScript(req, res);
-    }
+    } 
   }
 });
 
