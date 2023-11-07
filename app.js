@@ -13,9 +13,9 @@ let port = 3217;
 const serv = http.createServer((req, res) => {
   if (req.method === "GET"&& req.url === "/") {
       entryRoute(req, res)
-    } else if (req.method === "POST"&&req.url === "/index.css") {
+    } else if (req.method === "POST" && req.url === "/index.css") {
         Styles(req, res)
-    } else if (req.method === "POST" &&req.url === "/index.js") {
+    } else if (req.method === "POST" && req.url === "/index.js") {
         Script(req, res)
       }
 });
