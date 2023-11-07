@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "directories": {
-    "doc": "doc"
+    "doc": "doc",
+    "mod": "mod"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
