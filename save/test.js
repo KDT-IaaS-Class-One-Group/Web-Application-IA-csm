@@ -11,7 +11,7 @@ app.get("/search", (req, res) => {
   const searchTerm = req.query.searchTerm; // 검색어를 쿼리 파라미터로 받음
   const results = [];
 
-  fs.createReadStream("../data/cpu.csv")
+  fs.createReadStream("./data/cpu.csv")
     .pipe(csv())
     .on("data", (row) => {
       // CSV 파일에서 데이터 읽어오기
