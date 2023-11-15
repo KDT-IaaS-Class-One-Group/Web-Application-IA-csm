@@ -5,7 +5,7 @@ const contenType = require("./mod/contenType");
 const fs = require("fs");
 const rootRoute = require("./route/route");
 // port
-let port = 3217;
+let port = 3218;
 
 // route
 const serv = http.createServer((req, res) => {
